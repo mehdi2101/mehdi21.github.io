@@ -29,23 +29,23 @@ background-color: rgb(198, 198, 198);
 }
 
 .bg-body-tertiary{
-    background-color: rgb(240, 128, 63);
+    background-color: rgb(150, 58, 255);
 }
 
 .nav-link{
-    color: #a96969 !important;
+    color: #15096c !important;
 }
 
 .nav-link:hover{
-    color: #8a5353 !important;
+    color: #350079 !important;
 }
 
 .navbar-brand{
-    color: #994b4b !important;
+    color: #270074 !important;
 }
 
 .active{
-    color: #b86767 !important;
+    color: #19007f !important;
     
 }
 
@@ -74,4 +74,17 @@ p{
 
 .footer-mehdi{
     text-align: center;
+}
+
+.footer-mehdi{
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: #994b4b;
+    border-color:#994b4b;
+}
+
+.btn-primary:hover{
+    background-color: #270074;
 }
