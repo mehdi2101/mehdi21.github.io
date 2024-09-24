@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Page Grid</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+      gap: 10px; /* Adjust padding here */
+    }
+    .col-1 {
+      grid-column: span 2; /* First column spans 2 */
+      background-color: #ffeb99; /* Soft Yellow */
+      padding: 20px;
+    }
+    .col-2 {
+      grid-column: span 6; /* Second column spans 6 */
+      background-color: #99ccff; /* Light Blue */
+      padding: 20px;
+    }
+    .col-3 {
+      grid-column: span 4; /* Third column spans 4 */
+      background-color: #cc99ff; /* Lavender */
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="col-1">Column 1</div>
+    <div class="col-2">Column 2</div>
+    <div class="col-3">Column 3</div>
+  </div>
+</body>
+</html>

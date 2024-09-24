@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second Page Grid</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+      gap: 20px; /* Row gap added */
+    }
+    .col-1, .col-2, .col-3 {
+      padding: 20px;
+    }
+    .col-1 {
+      grid-column: span 2;
+      background-color: #ffb3b3; /* Light Red */
+    }
+    .col-2 {
+      grid-column: span 6;
+      background-color: #b3ffcc; /* Light Green */
+    }
+    .col-3 {
+      grid-column: span 4;
+      background-color: #ffd9b3; /* Light Peach */
+    }
+
+    @media (max-width: 768px) { /* Medium and smaller screens */
+      .col-1, .col-2, .col-3 {
+        grid-column: span 12; /* All span 12 columns on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="col-1">Column 1</div>
+    <div class="col-2">Column 2</div>
+    <div class="col-3">Column 3</div>
+  </div>
+</body>
+</html>
