@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.purple-col{
+    background-color: blueviolet;
+    color: white;
+}
+.yellow-col{
+    background-color:darkgoldenrod
+    
+}
+.grey-col{
+    background-color:gray;
+    color: white;
+}
