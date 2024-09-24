@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
 
+html body {
+background-color: rgb(198, 198, 198);
+}
 .purple-col{
     background-color: blueviolet;
     color: white;
@@ -12,4 +15,55 @@
 .grey-col{
     background-color:gray;
     color: white;
+}
+
+.calibri-regular {
+    font-family: "calibri", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.calibri-bold {
+    font-family: "calibri", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.bg-body-tertiary{
+    background-color: beige;
+}
+
+.nav-link{
+    color: #fff !important;
+}
+
+.nav-link:hover{
+    color: #fff !important;
+}
+
+.navbar-brand{
+    color: #fff !important;
+}
+
+.active{
+    color: #fff !important;
+    
+}
+
+.navbar-toggler{
+    filter: invert(100);
+}
+
+h1 {
+    font-size: 1.802em;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.424em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.802em;
+    font-weight: 400;
 }
