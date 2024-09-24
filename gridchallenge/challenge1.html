@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Demo with Grid</title>
+  <title>Grid Challenge</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
     .container {
       display: grid;
-      grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+      grid-template-columns: repeat(12, 1fr);
       gap: 10px; /* Adjust padding here */
     }
     .col-1 {
-      grid-column: span 2; /* First column spans 2 */
-      background-color: #ffeb99; /* Soft Yellow */
+      grid-column: span 2;
       padding: 20px;
     }
     .col-2 {
-      grid-column: span 6; /* Second column spans 6 */
-      background-color: #99ccff; /* Light Blue */
+      grid-column: span 6;
       padding: 20px;
     }
     .col-3 {
-      grid-column: span 4; /* Third column spans 4 */
-      background-color: #cc99ff; /* Lavender */
+      grid-column: span 4;
       padding: 20px;
+    }
+
+    /* Styles for Grid 1 */
+    .grid1 .col-1 {
+      background-color: #ffcccb; /* Column color */
+    }
+    .grid1 .col-2 {
+      background-color: #add8e6; /* Light Blue */
+    }
+    .grid1 .col-3 {
+      background-color: #90ee90; /* Light Green */
+    }
+
+    /* Styles for Grid 2 */
+    .grid2 .col-1 {
+      background-color: #ffeb99; /* Soft Yellow */
+    }
+    .grid2 .col-2 {
+      background-color: #99ccff; /* Light Blue */
+    }
+    .grid2 .col-3 {
+      background-color: #cc99ff; /* Lavender */
     }
   </style>
 </head>
@@ -38,34 +57,48 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" href="#" data-target="grid1">Grid 1</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/subpages/cards.html">Cards</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/subpages/carousel.html">Carousel</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Grid Challenge
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="challenge1.html">Challenge 1</a></li>
-              <li><a class="dropdown-item" href="challenge2.html">Challenge 2</a></li>
-              <li><a class="dropdown-item" href="challenge3.html">Challenge 3</a></li>
-            </ul>
+            <a class="nav-link" href="#" data-target="grid2">Grid 2</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container mt-4">
+  <div id="grid1" class="container mt-4 grid1">
     <div class="col-1">Column 1</div>
     <div class="col-2">Column 2</div>
     <div class="col-3">Column 3</div>
   </div>
+
+  <div id="grid2" class="container mt-4 grid2" style="display: none;">
+    <div class="col-1">Column 1</div>
+    <div class="col-2">Column 2</div>
+    <div class="col-3">Column 3</div>
+  </div>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        const target = this.getAttribute('data-target');
+        
+        // Hide both grids
+        document.getElementById('grid1').style.display = 'none';
+        document.getElementById('grid2').style.display = 'none';
+        
+        // Show the selected grid
+        document.getElementById(target).style.display = 'grid';
+        
+        // Update active link
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
