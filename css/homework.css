@@ -4,17 +4,18 @@
 html body {
 background-color: rgb(198, 198, 198);
 }
-.purple-col{
+.col-purple{
     background-color: blueviolet;
-    color: rgb(162, 96, 96);
+    color: rgb(255, 255, 255);
 }
-.yellow-col{
-    background-color:darkgoldenrod
-    
-}
-.grey-col{
+.col-yellow{
+    background-color:darkgoldenrod;
+    color:#15096c;
+    }
+
+.col-grey{
     background-color:rgb(118, 118, 118);
-    color: rgb(174, 109, 109);
+    color: rgb(0, 0, 0);
 }
 
 .calibri-regular {
@@ -29,7 +30,7 @@ background-color: rgb(198, 198, 198);
 }
 
 .bg-body-tertiary{
-    background-color: rgb(150, 58, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 .nav-link{
