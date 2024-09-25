@@ -88,3 +88,18 @@ p{
 .btn-primary:hover{
     background-color: #270074;
 }
+
+.carousel-padding{
+    padding-left: 125px;
+    padding-right: 125px;  
+    color: black;
+}
+
+ 
+.carousel-control-next-icon{
+    background-color:#994b4b;
+}
+
+.carousel-control-prev-icon{
+    background-color: #994b4b;
+}
