@@ -45,8 +45,7 @@ background-color: rgb(198, 198, 198);
 }
 
 .active{
-    color: #19007f !important;
-    
+    color:#ff0000 !important;
 }
 
 .navbar-toggler{
@@ -103,3 +102,4 @@ p{
 .carousel-control-prev-icon{
     background-color: #994b4b;
 }
+
